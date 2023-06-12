@@ -114,7 +114,8 @@ FROM #PercentPopulationVaccinated
 
 -- create view to store data for later visualizations
 
-CREATE VIEW PercentPopulationVaccinated AS
+CREATE VIEW
+PercentPopulationVaccinated AS
 SELECT dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
 SUM(vac.new_vaccinations) OVER (PARTITION BY dea.location ORDER BY dea.location, dea.date) as RollingPeopleVaccinated
 FROM CovidProject..CovidDeaths dea
