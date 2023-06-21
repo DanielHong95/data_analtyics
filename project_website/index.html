@@ -60,6 +60,49 @@
 			<!-- Projects -->
 			<article id="projects">
 				<h2 class="major">Projects</h2>
+
+				<script>
+					window.addEventListener('DOMContentLoaded', function() {
+						var spanElement = document.querySelector('.image.main');
+						var xhr = new XMLHttpRequest();
+						
+						xhr.onreadystatechange = function() {
+							if (xhr.readyState === XMLHttpRequest.DONE) {
+								if (xhr.status === 200) {
+									spanElement.innerHTML = xhr.responseText;
+								} else {
+									console.error('Failed to load the HTML file.');
+								}
+							}
+						};
+						
+						xhr.open('GET', 'inflation_analysis.html', true);
+						xhr.send();
+					});
+				</script>
+
+				<span class="image main"></span>
+
+				<h3>Inflation and Corporate Profits Analysis</h3>
+				<ul class="actions">
+					<li><a target="_blank"
+							href="https://public.tableau.com/app/profile/daniel.hong6443/viz/CovidDashboard_16848744580460/Dashboard1"
+							class="button">Dashboard</a></li>
+					<li><a target="_blank" href="https://github.com/DanielHong95/data_analtyics/tree/main/projects/covid_project"
+							class="button">Code</a></li>
+				</ul>
+				<p>The COVID-19 data analysis project utilizes SQL for data transformation and cleaning, and Tableau for data
+					visualization.
+					This dashboard presents data such as total deaths and vaccinations, deaths by Continent, vaccinations by
+					country, and a time series analysis and forecast of vaccination trends.</p>
+
+				<p>I gathered a large scale COVID-19 dataset and explored, cleaned, and transformed the data into structured
+					tables using Microsoft SQL Server.
+					Data such as aggregate deaths and vaccinations, death and vaccination percentages, location data and time
+					series data were utilized for analysis and visualization.
+					Intuitive dashboards and visualizations were created using Tableau, conveying key insights and trends in the
+					COVID-19 data.</p>
+
 				<h3>COVID-19 Global Data Analysis</h3>
 
 				<!-- Dashboard link -->
