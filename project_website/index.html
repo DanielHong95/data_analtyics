@@ -60,48 +60,31 @@
 			<!-- Projects -->
 			<article id="projects">
 				<h2 class="major">Projects</h2>
-
-				<script>
-					window.addEventListener('DOMContentLoaded', function() {
-						var spanElement = document.querySelector('.image.main');
-						var xhr = new XMLHttpRequest();
-						
-						xhr.onreadystatechange = function() {
-							if (xhr.readyState === XMLHttpRequest.DONE) {
-								if (xhr.status === 200) {
-									spanElement.innerHTML = xhr.responseText;
-								} else {
-									console.error('Failed to load the HTML file.');
-								}
-							}
-						};
-						
-						xhr.open('GET', 'inflation_analysis.html', true);
-						xhr.send();
-					});
-				</script>
-
-				<span class="image main"></span>
-
 				<h3>Inflation and Corporate Profits Analysis</h3>
+				<span class="image main"><iframe src="inflation_analysis.html" width="100%" height="600px"></iframe></span>
+
+
 				<ul class="actions">
-					<li><a target="_blank"
-							href="https://public.tableau.com/app/profile/daniel.hong6443/viz/CovidDashboard_16848744580460/Dashboard1"
-							class="button">Dashboard</a></li>
-					<li><a target="_blank" href="https://github.com/DanielHong95/data_analtyics/tree/main/projects/covid_project"
+					<li><a target="_blank" href="https://github.com/DanielHong95/data_analtyics/tree/main/projects/inflation_project"
 							class="button">Code</a></li>
 				</ul>
-				<p>The COVID-19 data analysis project utilizes SQL for data transformation and cleaning, and Tableau for data
-					visualization.
-					This dashboard presents data such as total deaths and vaccinations, deaths by Continent, vaccinations by
-					country, and a time series analysis and forecast of vaccination trends.</p>
-
-				<p>I gathered a large scale COVID-19 dataset and explored, cleaned, and transformed the data into structured
-					tables using Microsoft SQL Server.
-					Data such as aggregate deaths and vaccinations, death and vaccination percentages, location data and time
-					series data were utilized for analysis and visualization.
-					Intuitive dashboards and visualizations were created using Tableau, conveying key insights and trends in the
-					COVID-19 data.</p>
+				<p>The Inflation and Corporate Profits analysis project utilizes Jupyter Notebooks for data analysis and visualization,
+					while MSSQL was utilized for data transformation.
+					Libraries such as seaborn, plotly, matplotlib, and numpy were utilized to perform various analysis.
+					This project aimed to observe the various relationships between inflation, price of goods, and corporate profits.</p>
+				
+				
+				<p>I utilized the third-party FRED API in order to search and import large scale datasets pertaining to total Coporate
+					Profits and Consumer Price Indexes for all goods, gasoline, and Meats, Poultry, Fish and Eggs.
+					This data was exported to MSSQL where the datasets were merged with publicly available data pertaining to the average
+					price of gasoline per gallon, the average price of eggs per dozen, gross profits of Cal-Maine Foods, and gross profits
+					of Exxon Mobil.
+					The merged dataset was imported back into Jupyter Notebooks where I utilized libraries such as seaborn, matplotlib,
+					plotly, and numby in order to perfoem analysis such as correlation heatmaps, time series analysis, linear regressions,
+					and multivariate regressions.
+					These analysis were performed in order to examine the relationships between inflation, the cost of goods, and
+					corporate profits.
+				</p>
 
 				<h3>COVID-19 Global Data Analysis</h3>
 
